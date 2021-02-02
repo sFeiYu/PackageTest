@@ -1,0 +1,19 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "\/Users\/qfy\/Documents\/MyTestGit\/PackageTest\/.build\/x86_64-apple-macosx\/debug\/MyPackagePackageTests.xctest\/Contents\/MacOS\/MyPackagePackageTests",
+      "packageName" : "MyPackage",
+      "productName" : "MyPackagePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftTargetMap" : {
+    "C.MyPackage-debug.module" : "MyPackage",
+    "C.MyPackageTests-debug.module" : "MyPackageTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

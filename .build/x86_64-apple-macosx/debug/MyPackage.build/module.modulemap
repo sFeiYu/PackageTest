@@ -1,0 +1,4 @@
+module MyPackage {
+    header "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage-Swift.h"
+    requires objc
+}

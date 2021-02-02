@@ -1,0 +1,78 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "MyPackage-debug.module": ["<MyPackage-debug.module>"]
+  "MyPackagePackageTests-debug.test": ["<MyPackagePackageTests-debug.test>"]
+  "MyPackageTests-debug.module": ["<MyPackageTests-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<MyPackage-debug.module>"]
+  "test": ["<MyPackage-debug.module>","<MyPackagePackageTests-debug.test>","<MyPackageTests-debug.module>"]
+default: "main"
+nodes:
+  "/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/":
+    is-directory-structure: true
+  "/Users/qfy/Documents/MyTestGit/PackageTest/Tests/MyPackageTests/":
+    is-directory-structure: true
+commands:
+  "<MyPackage-debug.module>":
+    tool: phony
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.swiftmodule"]
+    outputs: ["<MyPackage-debug.module>"]
+
+  "<MyPackagePackageTests-debug.test>":
+    tool: phony
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackagePackageTests.xctest/Contents/MacOS/MyPackagePackageTests"]
+    outputs: ["<MyPackagePackageTests-debug.test>"]
+
+  "<MyPackageTests-debug.module>":
+    tool: phony
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/MyPackageTests.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/XCTestManifests.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.swiftmodule"]
+    outputs: ["<MyPackageTests-debug.module>"]
+
+  "C.MyPackage-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyPackage.swift","/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyTestLog.swift"]
+    outputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "MyPackage"
+    module-output-path: "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.swiftmodule"
+    import-paths: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build"
+    objects: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage-Swift.h","-color-diagnostics"]
+    sources: ["/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyPackage.swift","/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyTestLog.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "C.MyPackagePackageTests-debug.test":
+    tool: shell
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/MyPackageTests.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/XCTestManifests.swift.o"]
+    outputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackagePackageTests.xctest/Contents/MacOS/MyPackagePackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/MyPackagePackageTests.xctest/Contents/MacOS/MyPackagePackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug","-o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackagePackageTests.xctest/Contents/MacOS/MyPackagePackageTests","-module-name","MyPackagePackageTests","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackagePackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx","-target","x86_64-apple-macosx10.15","-Xlinker","-add_ast_path","-Xlinker","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.swiftmodule","-L","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"]
+
+  "C.MyPackageTests-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/Tests/MyPackageTests/MyPackageTests.swift","/Users/qfy/Documents/MyTestGit/PackageTest/Tests/MyPackageTests/XCTestManifests.swift","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.swiftmodule"]
+    outputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/MyPackageTests.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/XCTestManifests.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "MyPackageTests"
+    module-output-path: "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.swiftmodule"
+    import-paths: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build"
+    objects: ["/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/MyPackageTests.swift.o","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackageTests.build/XCTestManifests.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.15","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-color-diagnostics"]
+    sources: ["/Users/qfy/Documents/MyTestGit/PackageTest/Tests/MyPackageTests/MyPackageTests.swift","/Users/qfy/Documents/MyTestGit/PackageTest/Tests/MyPackageTests/XCTestManifests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/","/Users/qfy/Documents/MyTestGit/PackageTest/Tests/MyPackageTests/","/Users/qfy/Documents/MyTestGit/PackageTest/Package.swift","/Users/qfy/Documents/MyTestGit/PackageTest/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

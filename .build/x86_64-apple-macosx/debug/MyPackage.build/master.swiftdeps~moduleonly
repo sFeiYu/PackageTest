@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "ddedbeaad532819704e8f2ad991bf07f"
+build_time: [1612235579, 772101000]
+inputs:
+  "/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyPackage.swift": [1612233851, 701676264]
+  "/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyTestLog.swift": [1612235161, 488613233]

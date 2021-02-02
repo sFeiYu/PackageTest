@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/master.swiftdeps"
+  },
+  "/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyPackage.swift": {
+    "dependencies": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.d",
+    "object": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.swift.o",
+    "swiftmodule": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage~partial.swiftmodule",
+    "swift-dependencies": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyPackage.swiftdeps"
+  },
+  "/Users/qfy/Documents/MyTestGit/PackageTest/Sources/MyPackage/MyTestLog.swift": {
+    "dependencies": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.d",
+    "object": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.swift.o",
+    "swiftmodule": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog~partial.swiftmodule",
+    "swift-dependencies": "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/MyPackage.build/MyTestLog.swiftdeps"
+  }
+}
