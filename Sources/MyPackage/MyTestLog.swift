@@ -6,9 +6,7 @@
             History:      2021/2/2: File created.
     *******************************************************************/
     
-
-import UIKit
-
+import Foundation
 class MyTestLog: NSObject {
     func logTest() {
         print("这是一个测试！！！！")
