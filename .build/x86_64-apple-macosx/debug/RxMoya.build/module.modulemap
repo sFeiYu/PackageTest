@@ -1,0 +1,4 @@
+module RxMoya {
+    header "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/RxMoya.build/RxMoya-Swift.h"
+    requires objc
+}

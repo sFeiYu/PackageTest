@@ -1,0 +1,4 @@
+module ReactiveSwift {
+    header "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/ReactiveSwift.build/ReactiveSwift-Swift.h"
+    requires objc
+}

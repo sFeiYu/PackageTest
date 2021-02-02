@@ -1,0 +1,4 @@
+module RxCocoaRuntime {
+    umbrella header "/Users/qfy/Documents/MyTestGit/PackageTest/.build/checkouts/RxSwift/Sources/RxCocoaRuntime/include/RxCocoaRuntime.h"
+    export *
+}

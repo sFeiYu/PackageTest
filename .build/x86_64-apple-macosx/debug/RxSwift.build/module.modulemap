@@ -1,0 +1,4 @@
+module RxSwift {
+    header "/Users/qfy/Documents/MyTestGit/PackageTest/.build/x86_64-apple-macosx/debug/RxSwift.build/RxSwift-Swift.h"
+    requires objc
+}
