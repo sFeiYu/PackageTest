@@ -8,7 +8,8 @@
     
 import Foundation
 
-open class MyTestLog {
+///注意：被外部引用的一定要加public或者open
+public class MyTestLog {
     
     public init() {
         
