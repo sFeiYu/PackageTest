@@ -7,7 +7,8 @@
     *******************************************************************/
     
 import Foundation
-class MyTestLog: NSObject {
+
+struct MyTestLog {
     func logTest() {
         print("这是一个测试！！！！")
     }
