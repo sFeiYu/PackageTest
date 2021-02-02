@@ -8,8 +8,13 @@
     
 import Foundation
 
-struct MyTestLog {
-    func logTest() {
+open class MyTestLog {
+    
+    public init() {
+        
+    }
+    
+    public func logTest() {
         print("这是一个测试！！！！")
     }
 }
